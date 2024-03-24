@@ -1,0 +1,398 @@
+
+
+:root {
+    --color-degrade: linear-gradient(to right, var(--color-first), var(--color-five));
+    --color-first: #5680E9;
+    --color-second: #84CEEB;
+    --color-third: #5AB9EA;
+    --color-foor: #dab0d7b0;
+    --color-hover: #906bd3;
+    --color-five: #b8a6da;
+    --color-white: #fff;
+    --color-success: #2ecc71;
+    --color-error: #e74c3c;
+    --police-h1: 'Roboto', sans-serif;
+    --police-h2: 'Montserrat', sans-serif;
+    --police-p: 'Arial', sans-serif;
+    --color-background: url('../asset/background.jpg');
+}
+.jeu {
+    width: 80%;
+    height: 1000px;
+    padding: 25px;
+    margin: auto;
+    
+    cursor: default;
+  
+}
+
+/*Les trois zones de notre interface jeu */ 
+.groupe1, .groupe2, .groupe3 {
+    box-sizing: border-box;
+    float: left;
+    box-shadow: 0px 3px 3px #444444;
+    border-radius: 2%;
+}
+
+/*Le groupe 1 qui contient les cartes*/
+.groupe1{
+    width: 60%;
+    min-height: 500px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    
+
+}
+.groupe1 h2{
+    color: var(--color-first);
+}
+
+.groupe1 h3{
+    color: var(--color-first);
+}
+
+.cartes {
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding-right: 21px;
+
+    
+    
+}
+
+
+
+
+.carte {
+    
+    float: left;
+    width: 70px;
+    height: 85px;
+    margin: 21px 0 0 21px;
+    background: var(--color-degrade);
+
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 79px;
+    vertical-align: middle;
+    display: inline-block;
+    cursor: pointer;
+
+    color: var(--color-white);
+    border-radius: 15px;
+    box-shadow: 0px 6px 6px #444444;
+
+}
+
+.carte:hover {
+    background: var(--color-foor)
+}
+#estimation, #discussion,#interrogation,#cafe,#fin,#estimationmaj, #discussionmaj {
+    display: none;
+  }
+  
+.bouton-clique {
+    background: var(--color-first);
+    color: white;
+}
+#pieChart {
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0 auto;
+    display: block; 
+}
+
+/*Le groupe 2 qui contient les joueurs , chronomotre , bouton, les cartes jouées */
+.groupe2{
+    min-height: 500px;
+    width: 35%;
+    margin-left: 5%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    
+}
+
+.groupe2 > div {
+    margin-bottom: 20px;
+}
+
+.chronometre {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2ecc71; 
+    background-color: #ecf0f1; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: inline-block; 
+    margin: 10px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.blocreglechrono{
+    display: flex;
+    
+
+}
+
+#reglejeu{
+
+   text-transform: uppercase;
+   padding-left : 30px;
+   padding-top: 20px;
+   font-size: 14px;
+   font-weight: bold;
+  
+
+}
+.liste-joueurs {
+    list-style: none;
+    padding: 0;
+}
+
+.liste-joueurs > li {
+    margin-bottom: 10px;
+}
+.joueur{
+    display: flex;
+}
+.nom-joueur{
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 200px;
+    height: 30px;
+}
+
+.nom-joueur.active {
+    background-color: var(--color-success); 
+    color: var(--color-white);
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.profil-icon {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.button-container {
+    text-align: center;
+    justify-content: center;
+    margin-right: 20px;
+    display: flex;
+    
+}
+
+.button-container button {
+    color: var(--color-white);
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 10px;
+  
+    width: 150px; 
+    margin-bottom: 10px;
+    /*cursor: pointer;*/
+    margin-right: 50px;
+}
+
+.button-container button:hover {
+    background: var(--color-hover);
+  
+}
+
+
+/************************ groupe 3Backlog*/
+.groupe3{
+    
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-top: 50px;
+    min-height: 400px;
+    
+    
+    
+}
+
+.backlog {
+    margin-left:20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.buttonbacklog {
+    background-color: var(--color-first);
+    color: var(--color-white);
+    border: none;
+    padding: 10px;
+    margin: 0 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0px 3px 3px #444444;
+}
+.buttonbacklog:hover {
+    background:var(--color-hover) ;
+}
+#backlogListvalide{
+    display: none;
+}
+.active {
+    background:var(--color-five) 
+   
+}
+
+.backlog-list {
+    list-style: none;
+    padding: 0;
+
+    
+}
+
+
+
+.backlog-list li {
+    border: 1px solid var(--color-second);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+.carte {
+    transition: transform 0.3s ease; /* Ajoute une transition à la propriété 'transform' sur 0.3 seconde avec une accélération régulière */
+}
+
+.carte:hover {
+    transform: translateY(-5px); /* Déplace la carte vers le haut de 5 pixels lors du survol */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Ajoute une ombre lors du survol */
+}
+
+.carte:not(:hover) {
+    transform: translateY(0); /* Réinitialise la transformation lorsque la souris ne survole plus */
+    box-shadow: none; /* Réinitialise l'ombre */
+}
+.carte-cafe {
+    font-size: 0;
+    visibility: hidden;
+}
+
+/* Style pour les boutons désactivés */
+.bouton-desactive {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed; 
+}
+
+/* Animation pour rendre la carte visible */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation pour rendre la carte invisible */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* Animation pour rendre la carte visible */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation pour rendre la carte invisible */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.visible {
+    visibility: visible;
+    animation: fadeIn 0.5s ease-in-out; /* Ajustez la durée et l'effet au besoin */
+}
+
+.invisible {
+    visibility: hidden;
+    animation: fadeOut 0.5s ease-in-out; /* Ajustez la durée et l'effet au besoin */
+}
+
+
+.carte-jouee{
+margin-left: 15px;
+border-radius: 3px;
+border: solid black 1px;
+background: var(--color-degrade);
+width: 60px;
+height: 30px;
+color: var(--color-white);
+font-size: 20px;
+text-align: center;
+visibility: hidden;/*par defaut*/
+}
+
+.boutonfin button {
+    background-color: var(--color-first);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    /*display: block;*/
+    font-family: inherit;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* Ajustez la largeur en fonction de vos besoins */
+    margin-bottom: 10px;
+    cursor: pointer;
+    margin-left: 20px; 
+   
+}
+
+.boutonfin button:hover {
+    background-color: var(--color-five);
+}
+
+#boutonQuitter {
+    background-color: var(--color-first);
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    display: block;
+    font-family: inherit;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 16px;
+    width: 200px; /* Ajustez la largeur en fonction de vos besoins */
+    margin: 0px;
+    cursor: pointer;
+   
+}
+#boutonQuitter:hover {
+    background-color: var(--color-five);
+}
